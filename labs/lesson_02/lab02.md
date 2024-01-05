@@ -105,9 +105,7 @@ After creating the flow, it will be necessary to update the Connections of the n
 
 Starting with the `embed_the_queston` node, as we have not yet created a deployment for an embeddings model, it will be necessary to create it.
 
-Click on the create deployment button on the node.
-
-![LLMOps Workshop](images/18.12.2023_00.44.22_REC.png)
+Click on the create deployment button on the node in the **Deployments** section of your project.
 
 This click will take you to the deployment creation page, where you will select the text-embeddding-ada-002 deployment.
 
@@ -117,13 +115,15 @@ You can use the same name of the model in the deployment, as in the following fi
 
 ![LLMOps Workshop](images/18.12.2023_00.51.02_REC.png)
 
-After creating the text-embedding-ada-002 deployment you will be able to select it in the embed_the_question node.
+After creating the text-embedding-ada-002 deployment you will be able to select it in the `embed_the_question node`.
 
-Then update the Connection in the `modify_query_with_history` node, as indicated below:
+![LLMOps Workshop](images/05.01.2024_01.32.53_REC.png)
+
+Then update the Connection in the `modify_query_with_history` node with the gpt-4 deployment, as indicated below:
 
 ![LLMOps Workshop](images/18.12.2023_00.42.17_REC.png)
 
-And the Connection for the `chat_with_context node`, as indicated below:
+And the Connection for the `chat_with_context node` with the gpt-4 deployment, as indicated below:
 
 ![LLMOps Workshop](images/18.12.2023_00.17.30_REC.png)
 
@@ -141,7 +141,9 @@ Now go back to the Playground, select your `gpt-4` model and via the **Add your 
 
 Access the Prompt Flow and remove the Index Lookup node and add a Vector DB lookup to do your search in Azure AI Search index you just created.
 
-![LLMOps Workshop](images/18.12.2023_02.58.48_REC.png)
+The following image illustrates an example of how to fill in the parameters of the Vector DB Lookup node to access the previously created index.
+
+![LLMOps Workshop](images/search_config.png)
 
 Now everything is ready for you to run your chat flow.
 
