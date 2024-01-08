@@ -29,9 +29,9 @@ In this lab, for simplicity's sake, we will only go up to step 5 of the diagram 
 
 We split the lab into two steps; in the first, you will do the necessary setup to run the template, while in the second we will simulate a change in the code of your orchestration flow. Each step can be performed through its respective notebook:
 
-1) [Project setup](lab06_project_setup.ipynb)
+1) [Project setup](lab06_01_project_setup.ipynb)
 
-2) [Making a change in the code](lab06_project_making_a_change.ipynb)
+2) [Making a change in the code](lab06_02_project_making_a_change.ipynb)
 
 ### References
 
