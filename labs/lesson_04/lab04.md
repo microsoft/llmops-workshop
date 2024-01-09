@@ -14,7 +14,7 @@ Then, in the flow deployment, enable monitoring by clicking on the Enable button
 
 Reference:
 - https://learn.microsoft.com/en-us/azure/ai-studio/how-to/monitor-quality-safety
-
+- https://learn.microsoft.com/en-us/azure/machine-learning/prompt-flow/how-to-monitor-generative-ai-applications
 
 #### 2) Add Content Safety to your Solution.
 
