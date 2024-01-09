@@ -31,7 +31,7 @@ We split the lab into two steps; in the first, you will do the necessary setup t
 
 1) [Project setup](lab06_01_project_setup.ipynb)
 
-2) [Making a change in the code](lab06_02_project_making_a_change.ipynb)
+2) [Making a change in the flow](lab06_02_project_making_a_change.ipynb)
 
 ### References
 
