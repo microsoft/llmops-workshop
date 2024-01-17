@@ -1,17 +1,10 @@
 # LLMOps Workshop
 
-Learn how to build solutions with Large Language Models. This includes learning Azure Machine Learning Prompt Flow, Content Safety, Azure OpenAI, LLMs solutions Evaluation and Monitoring.
+Learn how to create solutions using Large Language Models. This includes acquiring proficiency in Azure AI, Azure Machine Learning Prompt Flow, Content Safety, Azure OpenAI, and the evaluation and monitoring of LLM-based solutions.
 
 ## Contents
 
 [Workshop contents](TOC.md)
-
-## Prerequisites
-
-* [Github.com Account](https://github.com).
-* [Azure Subscription](https://azure.com) with the following Azure services:
-    - [Azure AI Resource](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/create-azure-ai-resource)
-    - [Azure AI Search](https://learn.microsoft.com/en-us/azure/search/search-create-service-portal)
 
 ## Contributing
 
