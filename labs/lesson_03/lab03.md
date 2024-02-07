@@ -85,7 +85,7 @@ Upon selecting specific evaluation results, you will have the ability to view th
 
 ![LLMOps Workshop](images/08.02.2024_01.07.14_REC.png)
 
-#### 2) Deploy the flow to an online managed endpoint.
+#### 2) Deploy the flow to an online managed endpoint
 
 For this step, let's follow the instructions indicated in this link:
 
