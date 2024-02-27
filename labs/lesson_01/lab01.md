@@ -21,21 +21,27 @@ After logging in with your Azure account, you will see the following screen:
 
 ![LLMOps Workshop](images/16.12.2023_13.35.18_REC.png)
 
-In the Build tab, select New project.
+In the Build tab, select New project to create a project.
 
-![LLMOps Workshop](images/16.12.2023_16.05.08_REC.png)
+Choose an unique name for your project.
 
-To create a project, choose a unique name.
+![LLMOps Workshop](images/27.02.2024_01.28.51_REC.png)
 
-![LLMOps Workshop](images/16.12.2023_13.39.21_REC.png)
+Select the **Create a new resource** link and choose a name for your AI hub where your project resources will be created.
 
-Select the Create a new resource option in the dropdown.
+![LLMOps Workshop](images/27.02.2024_01.29.47_REC.png)
 
-![LLMOps Workshop](images/06.02.2024_21.29.51_REC.png)
+> Note: Choose the region where the GPT-4 models and text-embeddings-ada-002 are available.
+
+Still on this screen, select the **Create a new Azure AI Search** option; this service will be used in the following lessons.
+
+![LLMOps Workshop](images/27.02.2024_01.30.53_REC.png)
 
 Finally, select Create a project for the creation of the resources to be used in your project.
 
-![LLMOps Workshop](images/16.12.2023_16.07.18_REC.png)
+![LLMOps Workshop](images/27.02.2024_01.31.30_REC.png)
+
+![LLMOps Workshop](images/27.02.2024_01.32.19_REC.png) 
 
 #### 2) Deploy an Azure OpenAI model
 
