@@ -53,8 +53,6 @@ Select **Start** in the runtime dropdown to start a runtime to run your flow:
 
 After selecting the Runtime, we need to define the Connection with the LLM for each LLM step. In our case, these are `summarize_text_content` and `classify_with_llm`.
 
-![LLMOps Workshop](images/17.12.2023_23.45.03_REC.png)
-
 We will use the `Default_AzureOpenAI` Connection, which connects to the Azure OpenAI resource created when the Azure AI project was created.
 
 If you completed the first lesson, you will have available in this resource a `gpt-4` deployment to select, otherwise create a new deployment as described in *step 2* of *Lab 01*.
@@ -93,16 +91,18 @@ Select the **Multi-Round Q&A** on Your Data template.
 
 A flow with the following structure will be created.
 
-![LLMOps Workshop](images/18.12.2023_00.16.52_REC.png)
+![LLMOps Workshop](images/26.02.2024_10.00.05_REC.png)
 
 ##### 2.1) Flow overview
 
-The first node, `modify_query_with_history`, produces a search query using the user's question and their previous interactions. Next, in the `embed_the_question` node, the user's question is transformed into an embedding using the text-embedding-ada-002 model. This embedding is then used in the `search_question_from_indexed_docs` step to conduct a search within a vector store, which is where the RAG pattern retrieval takes place. Following the search process, the `generate_prompt_context` node consolidates the results into a string. This string then serves as input for the `Prompt_variants` node, which formulates various prompts. Finally, these prompts are used to generate the user's answer in the `chat_with_context` node.
+The first node, `modify_query_with_history`, produces a search query using the user's question and their previous interactions. Next, in the `lookup` node, the flow uses the vector index to conduct a search within a vector store, which is where the RAG pattern retrieval step takes place. Following the search process, the `generate_prompt_context` node consolidates the results into a string. This string then serves as input for the `Prompt_variants` node, which formulates various prompts. Finally, these prompts are used to generate the user's answer in the `chat_with_context` node.
 
 ##### 2.2) Search index
 
-Before you can start running your flow, a crucial step is to establish the search index for the Retrieval stage. This search index will be provided by the Azure AI Search service. If you don't already have an instance of this service, you will need to set one up.  
-   
+Before you can start running your flow, a crucial step is to establish the search index for the Retrieval stage. This search index will be provided by the Azure AI Search service.
+
+If you have already completed Lab1, you will have already created an AI Search service. Otherwise, you will need to set one up as explained below.
+
 Creating an instance of the Azure AI Search service is straightforward. You can do this by navigating to the **Azure Portal**, clicking on the **Create a resource** icon, searching for Azure AI Search, and then clicking on `Create`.  
    
 ![LLMOps Workshop](images/18.12.2023_01.40.22_REC.png)
@@ -111,9 +111,9 @@ This is the creation page for the search service.
 
 ![LLMOps Workshop](images/07.02.2024_09.22.08_REC.png)
    
-After creating the search service, you can create the index. 
+With the search service created, you can now proceed to create the index.
 
-In our case, we will make a Vector index. To do this, you just need to go back to the project in the **AI Studio**, select the **Indexes** option, and then click on the **New index** button.  
+In our case, we will create a Vector index. To do this, you just need to go back to the project in the **AI Studio**, select the **Indexes** option, and then click on the **New index** button.  
    
 ![LLMOps Workshop](images/07.02.2024_10.41.56_REC.png)
    
@@ -141,33 +141,39 @@ The indexing job will be created and submitted for execution, so please wait a w
 
 It may take about 10 minutes from the time it enters the execution queue until it starts.  
    
-Wait until the index status is `Ready` as in the next image, before proceeding with the next steps.  
+Wait until the index status is `Completed` as in the next image, before proceeding with the next steps.  
    
-![LLMOps Workshop](images/07.02.2024_19.03.34_REC.png)
+![LLMOps Workshop](images/26.02.2024_10.29.13_REC.png)
 
 Before returning to the flow created in Prompt Flow, copy the path of the created index.
 
-In order to do this, simply click on **Index data** in the **Details** section.  
+In order to do this, simply click on **Index data** in the **Details** section of the index you just created.  
    
-![LLMOps Workshop](images/07.02.2024_18.56.27_REC.png)
+![LLMOps Workshop](images/26.02.2024_10.47.48_REC.png)
    
-Next, copy the `Storage URI` in the **Data links** box.  
+Next, copy the `Data connection URI` in the **Data links** box.  
    
-![LLMOps Workshop](images/07.02.2024_18.57.34_REC.png)
+![LLMOps Workshop](images/26.02.2024_10.49.35_REC.png)
 
-Return to the flow created in Prompt Flow to configure the `search_question_from_index_docs` node, where you will fill in the `path` field with the value of the `Storage URI` you just copied.
+Return to the flow created in Prompt Flow to configure the `lookup` node.
 
-![LLMOps Workshop](images/07.02.2024_19.44.04_REC.png)
+After selecting the `lookup` node, click on `mlindex_content`.
+
+![LLMOps Workshop](images/26.02.2024_10.52.27_REC.png)
+
+A **Generate** window will be displayed where you will select the `MLIndex file from path` option in the `index_type` field, paste the value of the `Data connection URI` you just copied into the `mlindex_path` field as indicated in the next figure, and click on **Save**.
+
+![LLMOps Workshop](images/26.02.2024_10.33.13_REC.png)
+
+OK, now returning to the `lookup` node, choose the `Hybrid (vector + keyword)` query type in the query_type field, as shown in the next image.
+
+![LLMOps Workshop](images/26.02.2024_10.36.22_REC.png)
 
 ##### 2.3) Updating connection information
 
 Now you will need to update the Connections of the nodes that link with LLM models.  
-   
-Starting with the `embed_the_question` node, in the `Inputs` section select the `Default_AzureOpenAI` in the connection field and ```text-embedding-ada-002``` in the deployment_name.  
-   
-![LLMOps Workshop](images/07.02.2024_19.12.28_REC.png)
 
-Then update the Connection in the `modify_query_with_history` node with the gpt-4 deployment, as indicated below:
+Starting with the Connection in the `modify_query_with_history` node with the gpt-4 deployment, as indicated below:
 
 ![LLMOps Workshop](images/07.02.2024_19.14.16_REC.png)
 
@@ -179,4 +185,4 @@ And the Connection for the `chat_with_context node` with the gpt-4 deployment, a
 
 Everything is now set up for you to initiate your chat flow. Simply click on the blue **Chat** button located at the top right corner of your page to begin interacting with the flow.
 
-![LLMOps Workshop](images/18.12.2023_03.01.26_REC.png)
+![LLMOps Workshop](images/26.02.2024_10.41.23_REC.png)
