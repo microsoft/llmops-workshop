@@ -2,7 +2,15 @@
 
 In this Lab, you will learn about project organization and administration.
 
-**Concepts**
+#### Prerequisites
+
+An Azure subscription where you can create an AI Hub Resource and a AI Search service.
+
+#### Setup
+
+No setup needed.
+
+#### Concepts
 
 *Azure AI Resource*  
    
@@ -40,7 +48,7 @@ Log Analytics Workspaces serve as the backing storage for application insights, 
 
 https://learn.microsoft.com/en-us/azure/ai-studio/concepts/rbac-ai-studio
 
-**Lab**
+#### Lab Steps
 
 Create a new AI Project and Resource, and explore each in AI Studio.
 

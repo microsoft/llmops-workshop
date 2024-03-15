@@ -4,14 +4,25 @@ In this lab, we will have an overview on how to use Azure AI to work with large 
 
 The focus will be more on an overview of the creation process, so that in the next lessons we will delve deeper into the build, evaluation, deployment, and monitoring process.
 
-1) Create a project in Azure AI Studio.
-2) Deploy an Azure OpenAI model.
-3) Use AzureAI Studio Playground.
-4) Work with an Open Source LLM Model.
-5) Test the prompt in Content Safety.
-6) Create a Prompt Flow flow.
+#### Prerequisites
 
-#### 1) Create a project in Azure AI Studio
+An Azure subscription where you can create an AI Hub Resource and a AI Search service.
+
+#### Setup
+
+- [Create an AI Project and AI Hub Resources](#create-an-ai-project-and-ai-hub-resouces)
+- [Deploy an Azure OpenAI model](#deploy-an-azure-openai-model)
+
+#### Lab Steps
+
+1) Use AzureAI Studio Playground.
+2) Work with an Open Source LLM Model.
+3) Test the prompt in Content Safety.
+4) Create a Prompt Flow flow.
+
+#### Setup
+
+#####  Create an AI Project and AI Hub Resouces
 
 Let's start by creating a project in AzureAI Studio.
 
@@ -21,7 +32,7 @@ After logging in with your Azure account, you will see the following screen:
 
 ![LLMOps Workshop](images/16.12.2023_13.35.18_REC.png)
 
-In the Build tab, select New project to create a project.
+In the **Build** tab, select **New AI project** to create a project.
 
 Choose an unique name for your project.
 
@@ -43,7 +54,7 @@ Finally, select Create a project for the creation of the resources to be used in
 
 ![LLMOps Workshop](images/27.02.2024_01.32.19_REC.png) 
 
-#### 2) Deploy an Azure OpenAI model
+##### Deploy an Azure OpenAI model
 
 After creating your AI Project, the first step is to create a deployment of an OpenAI model so you can start experimenting with the prompts you will use in your application.
 
@@ -53,15 +64,19 @@ To do this, access your newly created project in the **Build** tab of the AI Stu
 
 From the list of models, select **gpt-4**.
 
-![LLMOps Workshop](images/16.12.2023_16.22.32_REC.png)
+![LLMOps Workshop](images/12.03.2024_16.22.33_REC.png)
 
-On the next screen, define the name of the deployment, in this case, you can use the same name as the model and in the version field select the latest available version, in the example below we chose version 1106-preview (gpt4-turbo).
+On the next screen, define the name of the deployment, in this case, you can use the same name as the model and in the version field select the latest available version, in the example below we chose version **0125-Preview** (gpt4-turbo).
 
-![LLMOps Workshop](images/16.12.2023_16.23.16_REC.png)
+![LLMOps Workshop](images/12.03.2024_16.31.47_REC.png)
 
-Done! Your model deployment is created and now you can test it in the Playground.
+> Click on **Advanced Options** and select at least 40K **Tokens per Minute Rate Limit*** to ensure the flows run smoothly in the upcoming lessons.
 
-#### 3) Use AzureAI Studio Playground
+Now, just click on **Deploy** and your model deployment is created. You can now test it in the Playground.
+
+#### Lab Steps
+
+##### 1) Use AzureAI Studio Playground
 
 On the screen with the deployment information, select the **Open in playground** button.
 
@@ -84,7 +99,7 @@ You're an AI assistant that helps telco company to extract valuable information 
 Only extract information that you're sure. If you're unsure, write "Unknown/Not Found" in the JSON file.
 ```
 
-After copying, select "Apply changes"
+After copying, select **Apply changes**
 
 ![LLMOps Workshop](images/06.02.2024_21.48.36_REC.png)
 
@@ -122,35 +137,35 @@ Notice that the model correctly followed the instructions indicated in the Syste
 
 ![LLMOps Workshop](images/16.12.2023_16.48.13_REC.png)
 
-#### 4) Work with an Open Source LLM Model
+##### 2) Work with an Open Source LLM Model
 
 Now let's test an open source Llama2 model from Meta.
 
-For this, go back to the Build tab and in the Deployments option click on Create.
+For this, go to the **Deployments** section in the **Build** tab and click on **Create (Real-time endpoint)**.
 
-![LLMOps Workshop](images/17.12.2023_08.29.57_REC.png)
+![LLMOps Workshop](images/12.03.2024_16.55.20_REC.png)
 
-Select the model **Llama-2-13b-chat**.
+Select the model **Llama-2-13b-chat** and click on **confirm**.
 
-![LLMOps Workshop](images/17.12.2023_10.34.20_REC.png)
+![LLMOps Workshop](images/12.03.2024_16.54.24_REC.png)
 
 Select the **Standard_NC24s_v3** compute for inference with the selected model, for this workshop one instance is enough.
 
 If you do not have enough quota you can access the AzureML Quota option in the Managed tab to request an increase in quota for the selected resource.
 
-![LLMOps Workshop](images/17.12.2023_10.43.08_REC.png)
+![LLMOps Workshop](images/12.03.2024_16.57.31_REC.png)
 
 The creation of the deployment will take a few minutes, the time varies, but generally something between 10 and 20 minutes.
 
 ![LLMOps Workshop](images/17.12.2023_18.37.17_REC.png)
 
-Done! Let's test this model by selecting the **Open in Playground** option on the deployment page.
+Done! Let's test this model by selecting the **Test** option on the deployment page.
 
 Adjust the ```max_next_tokens``` parameter to 1000 so we can test the same example we used with the gpt-4 model.
 
-![LLMOps Workshop](images/17.12.2023_18.41.08_REC.png)
+![LLMOps Workshop](images/12.03.2024_22.47.37_REC.png)
 
-Now just copy the text below into the Playground and send to observe the response generated by the Llama2 model.
+Now just copy the text below into the "Start typing text box" and then send to observe the response generated by the Llama2 model.
 
 ```
 You're an AI assistant that helps telco company to extract valuable information from their conversations by creating JSON files for each conversation transcription you receive. 
@@ -196,13 +211,13 @@ Agent: Thank you, Mr. Pérez. Have a good day. Goodbye.
 
 You will see a result generated by the model similar to the one shown in the image below.
 
-![LLMOps Workshop](images/17.12.2023_18.45.13_REC.png)
+![LLMOps Workshop](images/12.03.2024_22.48.11_REC.png)
 
-#### 5) Discover Content Safety
+##### 3) Discover Content Safety
 
 Now let's test how the Content Safety service can be used in conjunction with an Open Source model with Llama 2.
 
-First, let's test the behavior of the Azure OpenAI's gpt-4 model, select the Playground option from the Build menu.
+First, let's test the behavior of the Azure OpenAI's gpt-4 model, select the **Playground** option in the **Tools** section from the **Build**  menu.
 
 In the playground, make sure the selected model is gpt-4 and copy the following prompt:
 
@@ -232,13 +247,13 @@ Check the response from gpt-4, the Violence filter was triggered with the text.
 
 ![LLMOps Workshop](images/06.02.2024_23.10.43_REC.png)
 
-Now in the Build menu under Deployments, select the deployment of the Llama 2 model and then Open in Playground to test with the same prompt shown earlier.
+Now in the **Deployments** item in the **Components** section in the **Build** menu, select the deployment of the Llama 2 model and then open the **Test** tab to test with the same prompt shown earlier.
 
 Notice the result of the model.
 
-![LLMOps Workshop](images/06.02.2024_23.12.58_REC.png)
+![LLMOps Workshop](images/12.03.2024_22.55.31_REC.png)
 
-To see how the Content Safety service can help you filter this type of content, select Content Safety Studio from the All Azure AI drop-down menu in the top right corner.
+To see how the Content Safety service can help you filter this type of content, select **Content Safety Studio** from the **All Azure AI** drop-down menu in the top right corner.
 
 ![LLMOps Workshop](images/06.02.2024_23.28.26_REC.png)
 
@@ -250,7 +265,7 @@ Paste the same text used earlier into the **2. Test** field and then select **Ru
 
 ![LLMOps Workshop](images/17.12.2023_20.00.00_REC.png)
 
-#### 6) Create a Prompt Flow flow
+##### 4) Create a Prompt Flow flow
 
 Great, now that you have seen how you can deploy models, test them in the playground, and also seen a bit of how Content Safety works, let's see how you can create an orchestration flow for your LLM application in Prompt Flow.
 
@@ -271,7 +286,7 @@ Only extract information that you're sure. If you're unsure, write "Unknown/Not 
 
 ![LLMOps Workshop](images/17.12.2023_20.20.01_REC.png)
 
-By doing this, you will create a new flow in Prompt Flow.
+By doing this, you will create a new flow in Prompt Flow. Click **Open** to open your newly created flow.
 
 ![LLMOps Workshop](images/17.12.2023_20.20.26_REC.png)
 
@@ -289,7 +304,7 @@ Done! Now just select the started Runtime and click on the blue **Chat** button 
 
 ![LLMOps Workshop](images/17.12.2023_20.34.52_REC.png)
 
-Paste the same content used in the initial Playground test and send it in the chat, you will see the expected result as can be seen in the next figure:
+Paste the same content used in the initial Playground test and send it in the chat, you will see the expected result as can be seen in the next image:
 
 ```
 Agent: Hello, welcome to Telco's customer service. My name is Juan, how can I assist you?

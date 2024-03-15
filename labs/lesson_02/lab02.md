@@ -2,22 +2,26 @@
 
 Learn how to build prompt flow orchestrations for your LLM App.
 
+#### Prerequisites
+
+An Azure subscription where you can create an AI Hub Resource and a AI Search service.
+
+#### Setup
+
+If you are running this Lab after lesson 1, you don't need to worry about this step. Otherwise, follow **Setup** from **Lesson 1** to create a project and its associated resources in Azure AI Studio, as well as to deploy the GPT-4 model.
+
+#### Lab Steps
+
 During this lab, we will cover the following steps:
 
 1) Create a standard classification flow.
 2) Create a conversational RAG flow.
 
-#### Setup: Create a project in Azure AI Studio
-
-If you are running this Lab after lesson 1, you don't need to worry about this step.
-
-Otherwise, simply execute step 1 of lesson 1, which is to create a project in Azure AI Studio.
-
-#### 1) Create a standard classification flow
+##### 1) Create a standard classification flow
 
 Open your web browser and navigate to: https://ai.azure.com
 
-Enter the **Build** menu and then select the **Prompt flow** option and click on the blue "Create" button.
+Select the AI project that you created during the setup. Then, in the **Build** menu, select the **Prompt flow** option and click on the blue **Create** button.
 
 ![LLMOps Workshop](images/17.12.2023_22.11.22_REC.png)
 
@@ -25,7 +29,7 @@ We will create a Standard flow for classifying websites on the internet.
 
 In the flow creation window, select the **Standard flow** filter in the **Explore gallery** section.
 
-Then, click on the "Clone" button in the Web Classification box.
+Then, click on the **Clone** button in the Web Classification box.
 
 ![LLMOps Workshop](images/17.12.2023_22.12.07_REC.png)
 
@@ -51,11 +55,11 @@ Select **Start** in the runtime dropdown to start a runtime to run your flow:
 
 ![LLMOps Workshop](images/04.01.2024_19.35.49_REC.png)
 
-After selecting the Runtime, we need to define the Connection with the LLM for each LLM step. In our case, these are `summarize_text_content` and `classify_with_llm`.
+After starting the Runtime, we need to define the Connection with the LLM for each LLM step. In our case, these are `summarize_text_content` and `classify_with_llm`.
 
-We will use the `Default_AzureOpenAI` Connection, which connects to the Azure OpenAI resource created when the Azure AI project was created.
+We will use the `Default_AzureOpenAI` Connection, which connects to the Azure OpenAI resource that was created when the Azure AI project was set up. 
 
-If you completed the first lesson, you will have available in this resource a `gpt-4` deployment to select, otherwise create a new deployment as described in *step 2* of *Lab 01*.
+Select `gpt-4` in the deployment_name. This deployment was created during Setup.
 
 ![LLMOps Workshop](images/17.12.2023_23.49.29_REC.png)
 
@@ -63,7 +67,7 @@ Associate the same Connection for the `classify_with_llm` step:
 
 ![LLMOps Workshop](images/17.12.2023_23.58.57_REC.png)
 
->> Note: you can leave the `response_format` field in blank or select the `{"type":"text"}`.
+> Note: you can leave the `response_format` field in blank or select the `{"type":"text"}`.
 
 Once the Runtime is selected and the Connections are configured, you can start the flow by clicking the **Run** button at the top of the page.
 
@@ -77,33 +81,41 @@ After finishing the execution you will see that the flow is complete with all st
 
 ![LLMOps Workshop](images/18.12.2023_00.02.08_REC.png)
 
-You can view the result of the processing in the last node.
+You can view the result of the processing by clicking the last node.
 
 ![LLMOps Workshop](images/18.12.2023_00.06.51_REC.png)
 
-#### 2) Create a conversational RAG flow
+##### 2) Create a conversational RAG flow
 
-To create a conversational flow using the RAG pattern, start by creating a new flow in the Prompt Flow section within the **Build** area.
+Now you will create a conversational flow using the RAG pattern, start by creating a new flow in the **Prompt Flow** item in the **Tools** section within the **Build** tab.
 
-Select the **Multi-Round Q&A** on Your Data template.
+Select the **Multi-Round Q&A** on Your Data template after clicking the **Create** button.
 
 ![LLMOps Workshop](images/18.12.2023_00.13.52_REC.png)
 
-A flow with the following structure will be created.
+Click on the **Clone** button. A flow with the following structure will be created.
 
 ![LLMOps Workshop](images/26.02.2024_10.00.05_REC.png)
 
-##### 2.1) Flow overview
+Start the automatic runtime by selecting **Start** in the **Runtime** drop down. The runtime will be useful for you to work with the flow moving forward.
+
+![LLMOps Workshop](images/13.03.2024_10.31.21_REC.png)
+
+Click the **Save** button to save your flow.
+
+![LLMOps Workshop](images/13.03.2024_01.22.07_REC.png)
+
+###### 2.1) Flow overview
 
 The first node, `modify_query_with_history`, produces a search query using the user's question and their previous interactions. Next, in the `lookup` node, the flow uses the vector index to conduct a search within a vector store, which is where the RAG pattern retrieval step takes place. Following the search process, the `generate_prompt_context` node consolidates the results into a string. This string then serves as input for the `Prompt_variants` node, which formulates various prompts. Finally, these prompts are used to generate the user's answer in the `chat_with_context` node.
 
-##### 2.2) Search index
+###### 2.2) Search index
 
 Before you can start running your flow, a crucial step is to establish the search index for the Retrieval stage. This search index will be provided by the Azure AI Search service.
 
-If you have already completed Lab1, you will have already created an AI Search service. Otherwise, you will need to set one up as explained below.
+The AI Search service was originally created in the Setup section of this lab. If you have not yet created the Search service, you will need to set one up as explained below.
 
-Creating an instance of the Azure AI Search service is straightforward. You can do this by navigating to the **Azure Portal**, clicking on the **Create a resource** icon, searching for Azure AI Search, and then clicking on `Create`.  
+Creating an instance of the Azure AI Search service is straightforward. You can do this by navigating to the **Azure Portal**, clicking on the **Create a resource** icon, searching for Azure AI Search, and then clicking on **Create**.
    
 ![LLMOps Workshop](images/18.12.2023_01.40.22_REC.png)
    
@@ -145,31 +157,25 @@ Wait until the index status is `Completed` as in the next image, before proceedi
    
 ![LLMOps Workshop](images/26.02.2024_10.29.13_REC.png)
 
-Before returning to the flow created in Prompt Flow, copy the path of the created index.
+Done! You have created the index, as can be seen in the **Indexes** item of the **Components** section.
 
-In order to do this, simply click on **Index data** in the **Details** section of the index you just created.  
-   
-![LLMOps Workshop](images/26.02.2024_10.47.48_REC.png)
-   
-Next, copy the `Data connection URI` in the **Data links** box.  
-   
-![LLMOps Workshop](images/26.02.2024_10.49.35_REC.png)
+![LLMOps Workshop](images/13.03.2024_10.47.56_REC.png)
 
-Return to the flow created in Prompt Flow to configure the `lookup` node.
+Now return to the RAG flow created in **Prompt flow** to configure the `lookup` node.
 
 After selecting the `lookup` node, click on `mlindex_content`.
 
 ![LLMOps Workshop](images/26.02.2024_10.52.27_REC.png)
 
-A **Generate** window will be displayed where you will select the `MLIndex file from path` option in the `index_type` field, paste the value of the `Data connection URI` you just copied into the `mlindex_path` field as indicated in the next figure, and click on **Save**.
+A **Generate** window will appear. In this window, select the `Registered Index` option from the `index_type` field. Then, choose version 1 of the index you just created, as shown in the following image. After making these selections, click on **Save**.
 
-![LLMOps Workshop](images/26.02.2024_10.33.13_REC.png)
+![LLMOps Workshop](images/13.03.2024_10.47.05_REC.png)
 
-OK, now returning to the `lookup` node, choose the `Hybrid (vector + keyword)` query type in the query_type field, as shown in the next image.
+Now, let's go back to the `lookup` node. Select the `Hybrid (vector + keyword)` option from the query_type field, as shown in the subsequent image.
 
 ![LLMOps Workshop](images/26.02.2024_10.36.22_REC.png)
 
-##### 2.3) Updating connection information
+###### 2.3) Updating connection information
 
 Now you will need to update the Connections of the nodes that link with LLM models.  
 
@@ -181,8 +187,8 @@ And the Connection for the `chat_with_context node` with the gpt-4 deployment, a
 
 ![LLMOps Workshop](images/07.02.2024_19.15.13_REC.png)
 
-##### 2.4) Testing your RAG flow
+###### 2.4) Testing your RAG flow
 
 Everything is now set up for you to initiate your chat flow. Simply click on the blue **Chat** button located at the top right corner of your page to begin interacting with the flow.
 
-![LLMOps Workshop](images/26.02.2024_10.41.23_REC.png)
+![LLMOps Workshop](images/14.03.2024_15.00.08_REC.png)
