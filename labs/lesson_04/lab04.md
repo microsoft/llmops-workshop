@@ -1,16 +1,28 @@
 ####  Monitoring
 
+#### Prerequisites
+
+An Azure subscription where you can create an AI Hub Resource and a AI Search service.
+
+#### Setup
+
+If you are running this Lab after lesson 1, you don't need to worry about this step.
+
+Otherwise, follow **Setup** from **Lesson 1** to create a project and its associated resources in Azure AI Studio, as well as to deploy the GPT-4 model.
+
+#### Lab Steps
+
 In this Lab, you will execute the following steps:
 
 1) Monitoring your LLMs flow.
 
 2) Add Content Safety to your Solution.
 
-#### 1) Monitoring your LLMs flow.
+##### 1) Monitoring your LLMs flow
 
 Modify the output node of the workflow to incorporate the required information for computing the metrics that need monitoring, as outlined in the [User Experience](https://learn.microsoft.com/en-us/azure/ai-studio/how-to/monitor-quality-safety#user-experience) section of the Monitor Quality and Safety of Deployed Applications documentation. Be sure to activate monitoring by selecting the "Enable" button within the Model Monitoring section when deploying the workflow.
 
-#### 2) Add Content Safety to your Solution.
+##### 2) Add Content Safety to your Solution
 
 Create a basic flow from scratch (a simple Joke flow will be constructed).  
    
