@@ -113,19 +113,9 @@ The first node, `modify_query_with_history`, produces a search query using the u
 
 Before you can start running your flow, a crucial step is to establish the search index for the Retrieval stage. This search index will be provided by the Azure AI Search service.
 
-The AI Search service was originally created in the Setup section of this lab. If you have not yet created the Search service, you will need to set one up as explained below.
+The AI Search service was originally created in the **Setup** section of this lab. If you have not yet created the Search service, you will need to set one up as explained below. With the search service created, you can now proceed to create the index.
 
-Creating an instance of the Azure AI Search service is straightforward. You can do this by navigating to the **Azure Portal**, clicking on the **Create a resource** icon, searching for Azure AI Search, and then clicking on **Create**.
-   
-![LLMOps Workshop](images/18.12.2023_01.40.22_REC.png)
-   
-This is the creation page for the search service.  
-
-![LLMOps Workshop](images/07.02.2024_09.22.08_REC.png)
-   
-With the search service created, you can now proceed to create the index.
-
-In our case, we will create a Vector index. To do this, you just need to go back to the project in the **AI Studio**, select the **Indexes** option, and then click on the **New index** button.  
+In our case, we will create a **Vector index**. To do this, you just need to go back to the project in the **AI Studio**, select the **Indexes** option, and then click on the **New index** button.  
    
 ![LLMOps Workshop](images/07.02.2024_10.41.56_REC.png)
    
@@ -134,6 +124,8 @@ At the `Source data` stage, select the `Upload files/folders` option and upload 
 ![LLMOps Workshop](images/07.02.2024_10.42.40_REC.png)
    
 In `Index storage`, select the Search Service you created earlier.  
+
+> If someone has created the AI Search service for you, you can also use it to create the index. Simply select it in the **Select Azure AI Search service** option.
 
 ![LLMOps Workshop](images/07.02.2024_10.56.42_REC.png)
    
@@ -145,11 +137,11 @@ In `Index settings`, keep the default options as indicated below.
    
 ![LLMOps Workshop](images/07.02.2024_16.39.01_REC.png)
    
-> Note: If you want to select a virtual machine configuration, click on the `Select from recommended options`. If you don't select, the default configuration will use serverless processing.
+> Note: If you want to select a virtual machine configuration, click on the **Select from recommended options**. If you don't select, the default configuration will use serverless processing.
 
 Great, now just click on the **Create** button at the `Review and finish` stage.  
    
-The indexing job will be created and submitted for execution, so please wait a while for it to complete. 
+The indexing job will be created and submitted for execution, so please wait a while for it to complete.
 
 It may take about 10 minutes from the time it enters the execution queue until it starts.  
    
