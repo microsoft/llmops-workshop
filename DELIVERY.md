@@ -21,18 +21,25 @@ When planning the workshop session, consider that each lesson has an **estimated
 
 This workshop is structured to span over an 8-hour duration, encompassing all lessons. However, the length can be tailored to the participants' needs, permitting shorter sessions or emphasis on particular topics.
 
-### Delivery Examples  
+### Delivery Scenarios  
    
 Here are some suggestions for workshop configurations, which can be adjusted based on specific needs.  
-   
-| Description | Content | Duration | Lessons | Total Time |  
-|-------------|---------|----------|---------|------------|  
-| Full Workshop | All Topics | Two Days | D1: 1,2,3; D2: 4,5,6 | 8h |  
-| Shorter Version | Introduction + Building + Evaluating and Deployment | Half Day | 1,2,3 | 4h |  
-| Optimized Version | Short Intro + Building + Evaluating and Deployment | Half Day | 1(partial), 2,3 | 3h |
-   
 
-> For the Optimized configuration, use the first hour to present the following content from the workshop slide deck: *LLMOps Applying MLOps concepts to LLM Apps* section from Lesson 1 and the slides from Lessons 2 and 3. Then spend the next two hours on Labs 2 and 3.
+
+| Content | Duration | Lessons |
+|-------------|----------|---------|
+| Full Workshop | Two Days (8h) | D1: 1,2 and 3; D2: 4,5 and 6 |
+| Overview, Build, Evaluate and Deploy | Half Day (4h) | 1,2 and 3 |
+| Overview, Build, Evaluate and Deploy - Short Version * | 3h |  1,2,3 * |
+| Overview and Automation ** | 2h | 1,6 ** |
+
+
+
+> **Notes** <BR><BR> * In this condensed version, the first hour will be dedicated to presenting the `Applying LLMOps concepts to LLM Apps` slides from lesson 1 section, followed Lessons 2 and 3 sections from the full deck. The subsequent two hours will be allocated to conducting Labs 2 and 3.
+<BR><BR>
+> ** For this option, use the `LLMOps Overview and Automation` deck followed by lesson 6 lab.
+
+
 
 ### Additional Recommendations
 
