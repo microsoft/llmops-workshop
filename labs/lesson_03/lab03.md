@@ -112,7 +112,9 @@ Select the three evaluation flows you just created.
 
 ![LLMOps Workshop](images/14.03.2024_22.29.58_REC.png)
 
-Great job so far! Now, let's move on to the next step. Click on **Next** to set up the `question`, `context`, `ground_truth` and `answer` fields for each evaluation flow. You can see how to do this in the three images below. Please take a moment to ensure you've selected the correct value - it's crucial for accurate metric calculation. Keep up the good work!
+Great job so far! Now, let's move on to the next step. Click on **Next** to set up the `question`, `context`, `ground_truth` and `answer` fields for each evaluation flow. You can see how to do this in the three images below.
+
+> **Note:** Please take a moment to ensure you've selected the correct value. It's crucial for accurate metric calculation. Notice that the default values initially presented in the wizard are not the same as those indicated in the following images. Keep up the good work!
 
 **QnA GPT Similarity Evaluation**
 

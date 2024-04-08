@@ -2,6 +2,12 @@
 
 ## Changelog
 
+### 2024-04-08
+- **Changed**: Lab 01 - Added note to delete Llama2 deployment.
+- **Changed**: Lab 01 - Adjusted Llama2 model input to Json format in test window.
+- **Changed**: Lab 01 - Setup now includes Content Safety creation; wasn't needed before.
+- **Changed**: Lab 03 - Emphasized checking input values in evaluation flow.
+
 ### 2024-03-15
 - **Added**: Workshop delivery guide.
 - **Changed**: Some screenshots in Lab 01 due to UI updates in AI Studio.
