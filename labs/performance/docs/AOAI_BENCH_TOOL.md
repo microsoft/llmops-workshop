@@ -12,7 +12,7 @@ For simplicity and educational purposes, this lab will focus on the PayGo endpoi
 
 ##### Test Architecture
 
-In our testing setup, we primarily use the standard deployment of the gpt-35-turbo-16k model. For the first test run, we'll set a quota of 20K TPM (Tokens Per Minute). During the second test run, this quota will be increased to 200K TPM.
+In our testing setup, we primarily use the gpt-35-turbo-16k model in a standard deployment with a quota of 20K TPM (Tokens Per Minute).
 
 In the example provided in this guide, you will deploy the resource in the East US (eastus) Azure region. However, remember that you're free to choose any region that works best for you.
 
@@ -24,9 +24,9 @@ For the sake of simplicity in this lab, you'll operate the tool from your own wo
 
 ##### Test Scenario
 
-This test scenario involves running a load load test on an Azure OpenAI model deployment using the AOAI Benchmarking tool. The test mimics a situation where 100 requests are sent every minute, following a custom shape profile.
+This test scenario involves running a load test on an Azure OpenAI model deployment using the AOAI Benchmarking tool. Initially, the test mimics a situation where 4 requests are sent every minute, following a custom shape profile. Subsequently, we increase the number of requests per minute to 50.
 
-Each request will contain 5000 context tokens and will generate a maximum of 200 tokens. No retries will be made for failed requests. The test runs for a total of 180 seconds (3 minutes).
+Each request will contain 4500 context tokens and will generate a maximum of 500 tokens. No retries will be made for failed requests. The test runs for a total of 180 seconds (3 minutes).
 
 While this guide presents a simple scenario, you're encouraged to experiment with the parameters to simulate and test different scenarios after the initial run.
 
@@ -123,9 +123,9 @@ AOAI_DEPLOYMENT=[replace with your Azure OpenAI deployment name]
 TEST_NAME=[replace with your Test Run name]
 ```
 
-In `TEST_NAME` use **paygo-gpt35-eastus-20TPM**, for example:
+In `TEST_NAME` use **paygo-gpt35-eastus-4RPM**, for example:
 
-`TEST_NAME=paygo-gpt35-eastus-20TPM`
+`TEST_NAME=paygo-gpt35-eastus-4RPM`
 
 For the other three parameters, replace the placeholders with the corresponding values for your case.
 
@@ -139,7 +139,7 @@ In the terminal, execute the following command according to the type of shell us
 ./runtest.sh
 ```
 
-5. Update the deployment quota to 200K TPM and repeat steps 3 and 4, but use paygo-gpt35-eastus-200TPM in the TEST_NAME field in step 3.
+5. Update the deployment quota to 200K TPM and repeat steps 3 and 4, but use paygo-gpt35-eastus-50RPM in the `TEST_NAME` field in step 3.
 
 ##### Analyzing the Results
 
