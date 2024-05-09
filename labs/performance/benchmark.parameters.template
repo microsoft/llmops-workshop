@@ -1,0 +1,10 @@
+OPENAI_API_KEY=[replace with your Azure OpenAI API key]
+AOAI_ENDPOINT=https://[replace with your Azure OpenAI resource name].openai.azure.com/
+AOAI_DEPLOYMENT=[replace with your Azure OpenAI deployment name]
+TEST_NAME=[replace with your Test Run name, example: ptu-gpt4-eastus]
+ERROR_FILE=error.err
+CONTEXT_TOKENS=5000
+MAX_TOKENS=200
+RETRY=none
+RATE=100
+DURATION=180

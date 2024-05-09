@@ -1,7 +1,11 @@
 local/
+azure-openai-benchmark/
 *~$*.docx
 labs/lesson_06/llmops-project*/
 labs/lesson_06/llmops-project*/*
+*.log
+error.err
+benchmark.parameters
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

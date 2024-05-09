@@ -1,0 +1,6 @@
+ipykernel
+matplotlib
+nbstripout
+pandas
+seaborn
+tabulate

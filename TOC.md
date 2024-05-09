@@ -45,3 +45,10 @@ Each lesson includes an **estimated time** that covers both the conceptual part 
  *full-code. 2h duration* 
  - Github and Github Actions. 
  - Evaluation and Deployment Automation.
+ 
+## Extras
+
+### [LLM Performance Testing](labs/performance/README.md)
+*low-code. 2h duration*
+ - Benchmarking Azure OpenAI Models
+ - Load Testing LLM Apps

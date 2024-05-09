@@ -2,6 +2,9 @@
 
 ## Changelog
 
+### 2024-04-09
+- **Added**: LLM Performance Testing lab.
+
 ### 2024-04-08
 - **Changed**: Lab 01 - Added note to delete Llama2 deployment.
 - **Changed**: Lab 01 - Adjusted Llama2 model input to Json format in test window.
