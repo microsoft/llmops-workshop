@@ -1,4 +1,4 @@
-OPENAI_API_KEY=[replace with your Azure OpenAI API key]
+export OPENAI_API_KEY=[replace with your Azure OpenAI API key]
 AOAI_ENDPOINT=https://[replace with your Azure OpenAI resource name].openai.azure.com/
 AOAI_DEPLOYMENT=[replace with your Azure OpenAI deployment name]
 TEST_NAME=[replace with your Test Run name, example: ptu-gpt4-eastus]
