@@ -26,7 +26,7 @@ For the sake of simplicity in this lab, you'll operate the tool from your own wo
 
 This test scenario involves running a load load test on an Azure OpenAI model deployment using the AOAI Benchmarking tool. The test mimics a situation where 100 requests are sent every minute, following a custom shape profile.
 
-Each request will contain 1000 context tokens and will generate a maximum of 100 tokens. No retries will be made for failed requests. The test runs for a total of 180 seconds (3 minutes).
+Each request will contain 5000 context tokens and will generate a maximum of 200 tokens. No retries will be made for failed requests. The test runs for a total of 180 seconds (3 minutes).
 
 While this guide presents a simple scenario, you're encouraged to experiment with the parameters to simulate and test different scenarios after the initial run.
 
