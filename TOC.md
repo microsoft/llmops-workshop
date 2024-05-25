@@ -13,7 +13,7 @@ Each lesson includes an **estimated time** that covers both the conceptual part 
  - Azure AI Services Overview: 
    - Azure OpenAI  
    - Azure AI Studio 
-   - Azure ML PromptFlow 
+   - Azure AI PromptFlow 
    - Azure Content Safety 
 
 ### [Lesson 2](labs/lesson_02/lab02.md): Building LLMs Orchestration Flows
