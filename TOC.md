@@ -19,7 +19,7 @@ Each lesson includes an **estimated time** that covers both the conceptual part 
 ### [Lesson 2](labs/lesson_02/lab02.md): Building LLMs Orchestration Flows
 *low-code. 1.5h duration* 
  - LLM App Orchestration. 
- - AzureML Prompt Flow Standard and Chat flows.
+ - Prompt Flow Standard and Chat flows.
 
 ### [Lesson 3](labs/lesson_03/lab03.md): Evaluating and Deploying LLMs
 *low-code. 1.5h duration*
@@ -38,7 +38,6 @@ Each lesson includes an **estimated time** that covers both the conceptual part 
  *administration. 1h duration* 
  - How to create and organize projects. 
  - Azure AI Studio projects. 
- - AzureML Workspaces. 
  - RBAC roles and permissions 
 
 ### [Lesson 6](labs/lesson_06/lab06.md): Automating Everything

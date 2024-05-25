@@ -168,7 +168,7 @@ Select the model **Llama-2-13b-chat** and click on **confirm**.
 
 Select the **Standard_NC24s_v3** compute for inference with the selected model, for this workshop one instance is enough.
 
-If you do not have enough quota you can access the AzureML Quota option in the Managed tab to request an increase in quota for the selected resource.
+If you do not have enough quota you can access the Quota option in the Managed tab to request an increase in quota for the selected resource.
 
 ![LLMOps Workshop](images/12.03.2024_16.57.31_REC.png)
 
