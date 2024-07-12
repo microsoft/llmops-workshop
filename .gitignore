@@ -158,3 +158,10 @@ dmypy.json
 
 # Jupyter
 .ipynb_checkpoints
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor

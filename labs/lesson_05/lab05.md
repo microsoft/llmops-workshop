@@ -1,4 +1,9 @@
-####  Team Colaboration
+---
+title: 'Lab 05: Team Collaboration'
+layout: default
+nav_order: 6
+---
+####  Team Collaboration
 
 In this Lab, you will learn about project organization and administration.
 

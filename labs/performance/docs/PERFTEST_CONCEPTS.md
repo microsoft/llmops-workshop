@@ -1,3 +1,9 @@
+---
+title: 'Lab 07: Performance Evaluation'
+layout: default
+nav_order: 8
+has_children: true
+---
 # Performance Evaluation
 
 When developing Language Model (LLM) applications, we typically invest a significant amount of time in both development and evaluation. This is to ensure that the application can generate high-quality responses that are grounded in reliable sources and pose no harm to the user.

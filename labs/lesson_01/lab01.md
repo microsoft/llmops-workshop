@@ -1,3 +1,8 @@
+---
+title: 'Lab 01: Introduction to LLMs and Azure AI Services'
+layout: default
+nav_order: 1
+---
 #### Introduction to LLMs and Azure AI Services
 
 In this lab, we will have an overview on how to use Azure AI to work with large language models.

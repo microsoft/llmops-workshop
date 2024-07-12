@@ -1,3 +1,8 @@
+---
+title: Introduction
+layout: home
+nav_order: 1
+---
 # LLMOps Workshop
 
 ## Table of Contents

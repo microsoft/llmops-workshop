@@ -1,3 +1,8 @@
+---
+title: 'Delivery Guide'
+layout: default
+nav_order: 8
+---
 # LLMOps Workshop 
 
 ## Delivery Guide  

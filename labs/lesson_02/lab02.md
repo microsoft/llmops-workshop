@@ -1,3 +1,8 @@
+---
+title: 'Lab 02: Building LLMs Orchestration Flows'
+layout: default
+nav_order: 3
+---
 #### Building LLMs Orchestration Flows
 
 Learn how to build prompt flow orchestrations for your LLM App.

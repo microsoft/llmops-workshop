@@ -1,3 +1,8 @@
+---
+title: 'Lab 06: Automating Everything'
+layout: default
+nav_order: 7
+---
 ####  Lesson 6: Automating Everything
 
 In this Lab, you will learn how to automate the build, evaluation and deployment of your LLM orchestration flow. To accomplish this, we will use the [**LLMOps with Prompt Flow**](https://github.com/microsoft/llmops-promptflow-template) template as a reference for deploying an LLM using **Prompt Flow** and **Github Actions**.

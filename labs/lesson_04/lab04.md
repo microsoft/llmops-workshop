@@ -1,3 +1,8 @@
+---
+title: 'Lab 04: Monitoring'
+layout: default
+nav_order: 5
+---
 ####  Monitoring
 
 #### Prerequisites
