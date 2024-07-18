@@ -1,3 +1,8 @@
+---
+title: 'Lab 03: Evaluating and Deploying LLMs'
+layout: default
+nav_order: 4
+---
 #### Evaluating and Deploying LLMs
 
 #### Prerequisites

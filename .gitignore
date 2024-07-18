@@ -1,8 +1,8 @@
 local/
 azure-openai-benchmark/
 *~$*.docx
-labs/lesson_06/llmops-project*/
-labs/lesson_06/llmops-project*/*
+labs/lesson_05/llmops-project*/
+labs/lesson_05/llmops-project*/*
 *.log
 error.err
 benchmark.parameters
@@ -158,3 +158,10 @@ dmypy.json
 
 # Jupyter
 .ipynb_checkpoints
+
+# Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor

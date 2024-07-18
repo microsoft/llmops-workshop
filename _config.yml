@@ -1,0 +1,13 @@
+title: LLMOPs Workshop
+description: >- # this means to ignore newlines until "baseurl:"
+  LLMOPs Workshop 
+baseurl: "" 
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: "just-the-docs"
+
+plugins:
+  - jekyll-feed
+
+

@@ -1,3 +1,9 @@
+---
+title: 'Benchmarking Azure OpenAI Models'
+layout: default
+nav_order: 1
+parent: 'Lab 07: Performance Evaluation'
+---
 #### Benchmarking Azure OpenAI Models
 
 The [Azure OpenAI Benchmarking Tool](https://github.com/Azure/azure-openai-benchmark) is a powerful resource for evaluating the performance of Azure OpenAI deployments. It proves especially beneficial during the early stages of a project, aiding developers in assessing whether the model deployment is correctly sized and facilitating comparisons between different Azure OpenAI deployments. 
