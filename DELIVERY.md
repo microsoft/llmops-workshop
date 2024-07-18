@@ -33,7 +33,7 @@ Here are some suggestions for workshop configurations, which can be adjusted bas
 
 | Content | Duration | Lessons |
 |-------------|----------|---------|
-| Full Workshop | Two Days (2x4h) | D1: 1,2 and 3; D2: 4,5 and 6 |
+| Full Workshop | Two Days (2x4h) | D1: 1,2 and 3; D2: 4 and 5|
 | Overview, Build, Evaluate and Deploy | Half Day (4h) | 1,2 and 3 |
 | Overview, Build, Evaluate and Deploy - Short Version * | 3h |  1,2,3 * |
 | Overview and Automation ** | 2h | 1,6 ** |

@@ -2,6 +2,10 @@
 
 ## Changelog
 
+### 2024-07-18
+- **Added**: Github.io page.
+- **Changed**: Removed Lab 05 Team Collaboration.
+- 
 ### 2024-04-09
 - **Added**: LLM Performance Testing lab.
 

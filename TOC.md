@@ -5,6 +5,8 @@ nav_order: 1
 ---
 # LLMOps Workshop
 
+Welcome to the LLMOps workshop! This course will guide you through building, evaluating, monitoring, and deploying Large Language Model solutions efficiently using Azure AI, Azure Machine Learning Prompt Flow, Content Safety, and Azure OpenAI. Let's master LLMOps together!
+
 ## Table of Contents
 
 The workshop is composed of the lessons below. They are sorted by coding levels: **no-code** for beginners, **low-code** for intermediates, and **full-code** for advanced learners, indicating the coding effort needed. 
@@ -39,13 +41,7 @@ Each lesson includes an **estimated time** that covers both the conceptual part 
  - Operational metrics.
 - Content safety to protect your solution. 
 
-### [Lesson 5](labs/lesson_05/lab05.md): Team Collaboration
- *administration. 1h duration* 
- - How to create and organize projects. 
- - Azure AI Studio projects. 
- - RBAC roles and permissions 
-
-### [Lesson 6](labs/lesson_06/lab06.md): Automating Everything
+### [Lesson 5](labs/lesson_05/lab05.md): Automating Everything
  *full-code. 2h duration* 
  - Github and Github Actions. 
  - Evaluation and Deployment Automation.
