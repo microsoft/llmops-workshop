@@ -1,7 +1,8 @@
 ---
-title: LLM Performance Testing
+title: 'Lab 06: Performance Evaluation'
 layout: default
-search_exclude: true
+nav_order: 7
+has_children: true
 ---
 
 #### LLM Performance Testing

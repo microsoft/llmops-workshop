@@ -1,8 +1,8 @@
 ---
-title: 'Lab 06: Performance Evaluation'
+title: 'Performance Evaluation'
 layout: default
-nav_order: 7
-has_children: true
+nav_order: 1
+parent: 'Lab 06: Performance Evaluation'
 ---
 # Performance Evaluation
 
