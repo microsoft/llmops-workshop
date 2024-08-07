@@ -1,7 +1,7 @@
 ---
 title: LLM Performance Testing
-layout: none
-nav_order: null
+layout: default
+search_exclude: true
 ---
 
 #### LLM Performance Testing
