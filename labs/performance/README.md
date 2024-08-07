@@ -1,3 +1,9 @@
+---
+title: LLM Performance Testing
+layout: none
+nav_order: null
+---
+
 #### LLM Performance Testing
 
 Welcome to the practical part of the performance testing lesson. This lab is divided into two separate tasks. Each one is designed to give you practical experience with performance testing. Below, you'll find a brief overview of each task, along with links to detailed instructions. If you want to dive deeper into how to evaluate the performance of LLM models, check out the [Performance Evaluation](docs/PERFTEST_CONCEPTS.md) section.
