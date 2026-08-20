@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository has been retired and is now archived. For active development, documentation, and support, please visit [AgentOps Accelerator](https://aka.ms/agentops-accelerator).**
+
 # LLMOps Workshop
 
 Welcome to the LLMOps workshop! This course will guide you through building, evaluating, monitoring, and deploying Large Language Model solutions efficiently using Azure AI, Azure Machine Learning Prompt Flow, Content Safety, and Azure OpenAI. Let's master LLMOps together!
